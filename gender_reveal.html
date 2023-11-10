@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Baby Gender Reveal</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background-image: url('background_image.png'); /* 背景画像を設定 */
+            background-size: cover; /* 背景画像をカバーするように設定 */
+            background-position: center; /* 背景画像を中央に配置 */
+            background-repeat: no-repeat; /* 背景画像の繰り返しを無効に */
+        }
+        h1 {
+            font-size: 36px; /* タイトルのサイズを大きくする */
+            color: pink; /* タイトルの色を設定 */
+            font-family: 'Cursive'; /* より装飾的なフォントファミリーを使用 */
+            margin-bottom: 20px; /* タイトルの下の余白 */
+        }
+        .content {
+            text-align: center; /* このコンテナ内の要素を中央揃えに */
+        }
+        #revealImage {
+            max-width: 100%; /* 画像の幅をページ幅に合わせる */
+            max-height: 500px; /* 最大の高さを設定 */
+            margin: 20px auto;
+            opacity: 1; 
+            transition: opacity 1s, transform 1s; /* フェードインと移動の持続時間を1秒に設定 */
+            object-fit: contain; /* 画像全体が見えるように調整 */
+        }
+        #revealImage.fade-in {
+            opacity: 1; /* フェードイン後の透明度 */
+            transform: scale(1.1); /* フェードイン後のサイズ */
+        }
+        button {
+            font-size: 20px;
+            color: white;
+            background-color: pink;
+            border: none;
+            border-radius: 15px;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: rgb(221, 238, 137);
+        }
+        #message {
+            font-size: 20px; /* フォントサイズ */
+            color: #555; /* フォントカラー */
+            margin-top: 20px; /* 余白 */
+            /* その他のスタイリングは必要に応じて */
+        }
+    </style>
+</head>
+<body>
+    <h1>Baby Gender Reveal ♡</h1> <!-- タイトル -->
+    <div class="content"> <!-- コンテンツコンテナ -->
+        <div class="image-container">
+            <img id="revealImage" src="boy_or_girl_image.png" alt="Boy or Girl">
+        </div>
+        <div class="button-container">
+            <button id="revealButton" onclick="revealGender()">Let's see !!</button>
+        </div>
+        <p id="message" style="display: none;">平素よりお力添えいただきありがとうございます<br>元気な赤ちゃんと出会えますように</p>
+    </div>
+
+
+    <script>
+        function revealGender() {
+            var image = document.getElementById('revealImage');
+            var message = document.getElementById('message'); // メッセージ要素を取得
+            image.style.opacity = '0'; // 透明にする
+
+            setTimeout(function() {
+                image.src = "boy_image.png"; // 画像のソースを変更
+                image.style.transition = 'opacity 1s, transform 1s'; // トランジションを設定
+            }, 1000); // 1秒後に実行 (フェードアウト完了後)
+
+            setTimeout(function() {
+                image.style.opacity = '1'; // フェードイン
+                message.style.display = 'block'; // メッセージを表示
+            }, 1100); // さらに0.1秒後に実行 (ソース変更後)
+
+            document.getElementById('revealButton').style.display = 'none'; // ボタンを非表示にする
+        }
+    </script>
+</body>
+</html>
+
