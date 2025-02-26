@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
+  <!-- 小さな星 (40x40) -->
+  <defs>
+    <linearGradient id="starGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFE0FB" />
+      <stop offset="100%" stop-color="#FFBFF1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="1.5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+  <g filter="url(#glow)">
+    <!-- 星の本体 -->
+    <path d="M20,4 L24,16 L36,16 L26,24 L30,36 L20,28 L10,36 L14,24 L4,16 L16,16 Z" fill="url(#starGradient2)" />
+    
+    <!-- 星のキラキラ効果 -->
+    <circle cx="16" cy="12" r="1.5" fill="#FFFFFF" opacity="0.7" />
+    
+    <!-- 星の顔 -->
+    <circle cx="17" cy="20" r="1.2" fill="#FF8FE3" />
+    <circle cx="23" cy="20" r="1.2" fill="#FF8FE3" />
+    <path d="M17,24 Q20,26 23,24" fill="none" stroke="#FF8FE3" stroke-width="1.2" stroke-linecap="round" />
+  </g>
+</svg>

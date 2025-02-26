@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 100">
+  <!-- 大きな風船 (50x100) -->
+  <defs>
+    <linearGradient id="balloonGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#A6E3FF" />
+      <stop offset="100%" stop-color="#7FC8F1" />
+    </linearGradient>
+  </defs>
+  <g>
+    <!-- 風船本体 -->
+    <path d="M25,15 C10,15 10,45 25,50 C40,45 40,15 25,15 Z" fill="url(#balloonGradient2)" />
+    
+    <!-- 風船のキラキラ効果 -->
+    <ellipse cx="18" cy="25" rx="4" ry="3" fill="#FFFFFF" opacity="0.6" />
+    
+    <!-- 風船の紐 -->
+    <path d="M25,50 C28,60 22,70 25,80" fill="none" stroke="#BFE6FF" stroke-width="2" stroke-linecap="round" />
+    
+    <!-- 風船の顔 -->
+    <circle cx="20" cy="30" r="2" fill="#5EAADE" />
+    <circle cx="30" cy="30" r="2" fill="#5EAADE" />
+    <path d="M20,38 Q25,42 30,38" fill="none" stroke="#5EAADE" stroke-width="2" stroke-linecap="round" />
+  </g>
+</svg>

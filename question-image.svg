@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 320">
+  <defs>
+    <linearGradient id="bgGradientQuest" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF9FB" />
+      <stop offset="100%" stop-color="#F0F8FF" />
+    </linearGradient>
+    <linearGradient id="pinkSide" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFCCE5" />
+      <stop offset="50%" stop-color="#FFD6EA" />
+      <stop offset="50%" stop-color="#FFFFFF" />
+    </linearGradient>
+    <linearGradient id="blueSide" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="50%" stop-color="#D6E6FF" />
+      <stop offset="100%" stop-color="#CCE5FF" />
+    </linearGradient>
+    <filter id="shadowEffect">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3" />
+      <feOffset dx="2" dy="2" result="offsetblur" />
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.3" />
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- 背景 -->
+  <rect width="400" height="320" fill="url(#bgGradientQuest)" rx="20" ry="20" />
+  
+  <!-- 分割背景 -->
+  <rect x="0" y="80" width="200" height="180" fill="url(#pinkSide)" />
+  <rect x="200" y="80" width="200" height="180" fill="url(#blueSide)" />
+  
+  <!-- 装飾 - ピンク側 -->
+  <circle cx="80" cy="120" r="30" fill="#FFAED5" opacity="0.3" />
+  <circle cx="50" cy="180" r="20" fill="#FFAED5" opacity="0.2" />
+  <circle cx="120" cy="220" r="25" fill="#FFAED5" opacity="0.25" />
+  
+  <!-- 装飾 - ブルー側 -->
+  <circle cx="320" cy="120" r="30" fill="#AEDEFF" opacity="0.3" />
+  <circle cx="350" cy="180" r="20" fill="#AEDEFF" opacity="0.2" />
+  <circle cx="280" cy="220" r="25" fill="#AEDEFF" opacity="0.25" />
+  
+  <!-- 中央の疑問符 -->
+  <text x="200" y="190" font-family="'Arial', sans-serif" font-size="120" font-weight="bold" text-anchor="middle" fill="#E0E0E0" filter="url(#shadowEffect)">?</text>
+  
+  <!-- ピンク側のガールアイコン -->
+  <circle cx="100" cy="150" r="20" fill="#FF9ECA" filter="url(#shadowEffect)" />
+  <path d="M100,130 L100,140 M90,150 L110,150 M100,150 L100,170 M90,165 L100,170 L110,165" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" />
+  
+  <!-- ブルー側のボーイアイコン -->
+  <circle cx="300" cy="150" r="20" fill="#9ECFFF" filter="url(#shadowEffect)" />
+  <path d="M300,130 L300,170 M290,140 L300,130 L310,140 M290,155 L310,155" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" />
+  
+  <!-- テキスト "BOY OR GIRL?" -->
+  <text x="200" y="70" font-family="'Arial', sans-serif" font-size="30" font-weight="bold" text-anchor="middle" fill="#C0C0C0" filter="url(#shadowEffect)">BOY OR GIRL?</text>
+  
+  <!-- 下部テキスト -->
+  <text x="200" y="280" font-family="'Arial', sans-serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#AAAAAA">Click to reveal!</text>
+</svg>
